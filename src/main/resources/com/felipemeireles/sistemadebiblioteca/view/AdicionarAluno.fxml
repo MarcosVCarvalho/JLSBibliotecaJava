@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="785.0" prefWidth="1218.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.felipemeireles.sistemadebiblioteca.controller.AdicionarAlunoController">
+   <children>
+      <TableView fx:id="tabelaAlunos" layoutX="7.0" layoutY="277.0" prefHeight="502.0" prefWidth="1202.0">
+        <columns>
+          <TableColumn fx:id="colunaId" prefWidth="67.2000093460083" text="Id" />
+          <TableColumn fx:id="colNome" prefWidth="439.99998474121094" text="Nome do Aluno" />
+            <TableColumn fx:id="colEmail" prefWidth="309.5999755859375" text="E-Mail" />
+            <TableColumn fx:id="colCPF" prefWidth="164.800048828125" text="CPF" />
+            <TableColumn fx:id="colTelefone" prefWidth="224.800048828125" text="Telefone" />
+        </columns>
+      </TableView>
+      <Label layoutX="75.0" layoutY="15.0" text="Cadastrar Aluno" textFill="#234324">
+         <font>
+            <Font name="SansSerif Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="63.0" text="Nome do Aluno:">
+         <font>
+            <Font name="SansSerif Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="campoNome" layoutX="27.0" layoutY="90.0" prefHeight="26.0" prefWidth="537.0" promptText="Nome completo do aluno">
+         <font>
+            <Font size="13.0" />
+         </font></TextField>
+      <Label layoutX="33.0" layoutY="127.0" text="E-Mail:">
+         <font>
+            <Font name="SansSerif Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="campoEmail" layoutX="27.0" layoutY="154.0" prefHeight="26.0" prefWidth="538.0" promptText="Exemplo@email.com">
+         <font>
+            <Font size="13.0" />
+         </font></TextField>
+      <Label layoutX="33.0" layoutY="195.0" text="CPF:">
+         <font>
+            <Font name="SansSerif Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="campoCPF" layoutX="30.0" layoutY="223.0" prefHeight="26.0" prefWidth="163.0" promptText="123.456.789-00">
+         <font>
+            <Font size="13.0" />
+         </font></TextField>
+      <Label layoutX="220.0" layoutY="195.0" text="Telefone:">
+         <font>
+            <Font name="SansSerif Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="campoTelefone" layoutX="220.0" layoutY="223.0" prefHeight="26.0" prefWidth="177.0" promptText="(00) 1234-5678">
+         <font>
+            <Font size="13.0" />
+         </font></TextField>
+      <Button layoutX="721.0" layoutY="80.0" mnemonicParsing="false" onAction="#salvarAluno" prefHeight="47.0" prefWidth="208.0" style="-fx-background-color: #1ee20f; -fx-border-color: black;" text="➕ CADASTRAR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="721.0" layoutY="157.0" mnemonicParsing="false" onAction="#limparCampos" prefHeight="47.0" prefWidth="208.0" style="-fx-border-color: black; -fx-background-color: gray;" text="LIMPAR CAMPOS" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="23.0" layoutY="11.0" mnemonicParsing="false" onAction="#voltarTela" prefHeight="43.0" prefWidth="49.0" style="-fx-background-color: #234324;" text="⬅" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

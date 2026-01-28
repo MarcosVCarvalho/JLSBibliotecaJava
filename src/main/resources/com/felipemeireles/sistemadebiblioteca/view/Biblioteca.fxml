@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pagbase" maxHeight="785.0" maxWidth="1550.0" minHeight="785.0" minWidth="-Infinity" prefWidth="1550.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.felipemeireles.sistemadebiblioteca.controller.BibliotecaController">
+    <children>
+        <Pane fx:id="painelDeConteudo" layoutX="331.0" prefHeight="785.0" prefWidth="1218.0" />
+          <Pane prefHeight="175.0" prefWidth="331.0" style="-fx-background-color: #234324;">
+              <children>
+                  <ImageView fitHeight="141.0" fitWidth="148.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                          <Image url="@../img/JlsLogo.png" />
+                      </image>
+                  </ImageView>
+                  <Label layoutX="154.0" layoutY="48.0" prefHeight="43.0" prefWidth="177.0" text="Biblioteca" textFill="WHITE">
+                      <font>
+                          <Font name="Segoe UI Bold" size="36.0" />
+                      </font>
+                  </Label>
+                  <Label layoutX="216.0" layoutY="91.0" text="JLS" textFill="WHITE">
+                      <font>
+                          <Font name="Segoe UI Bold" size="35.0" />
+                      </font>
+                  </Label>
+              </children>
+          </Pane>
+            <Pane layoutY="174.0" prefHeight="614.0" prefWidth="331.0" style="-fx-background-color: #234324;">
+                <children>
+                    <Button fx:id="btnDevolverLivros" layoutX="37.0" layoutY="340.0" mnemonicParsing="false" onAction="#abrirTelaDevolucao" prefHeight="43.0" prefWidth="242.0" style="-fx-border-color: white; -fx-background-color: white; -fx-text-fill: #0a6789;" text="📥 Devoluções" textFill="WHITE" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="340.0">
+                        <font>
+                            <Font name="SansSerif Bold" size="19.0" />
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                    <Button fx:id="btnCadastrarAluno" layoutX="37.0" layoutY="264.0" mnemonicParsing="false" onAction="#abrirTelaAlunos" prefHeight="43.0" prefWidth="242.0" style="-fx-border-color: white; -fx-background-color: white; -fx-text-fill: #0a6789;" text="🧑‍🎓 Alunos" textFill="WHITE" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="264.0">
+                        <font>
+                            <Font name="SansSerif Bold" size="19.0" />
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                    <Button fx:id="btnSair" layoutX="37.0" layoutY="498.0" mnemonicParsing="false" onAction="#sair" prefHeight="43.0" prefWidth="242.0" style="-fx-background-color: red; -fx-border-color: white;" text="⬅ Sair" textFill="WHITE" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="498.0">
+                        <font>
+                            <Font name="SansSerif Bold" size="19.0" />
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                    <Button fx:id="btnListarLivros" layoutX="37.0" layoutY="108.0" mnemonicParsing="false" onAction="#abrirTelaListarLivros" prefHeight="43.0" prefWidth="242.0" style="-fx-border-color: white; -fx-background-color: white; -fx-text-fill: #0a6789;" text="📖 Livros" textFill="WHITE" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="108.0">
+                        <font>
+                            <Font name="SansSerif Bold" size="19.0" />
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                    <Button fx:id="btnInicio" alignment="CENTER" layoutX="37.0" layoutY="33.0" mnemonicParsing="false" onAction="#abrirDashboard" prefHeight="43.0" prefWidth="242.0" style="-fx-background-color: white; -fx-text-fill: #0a6789;" text="🏠 Inicío" textFill="WHITE" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="33.0">
+                        <font>
+                            <Font name="SansSerif Bold" size="19.0" />
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                    <Button fx:id="btnEmprestarLivros" layoutX="37.0" layoutY="185.0" mnemonicParsing="false" onAction="#abrirEmprestarLivro" prefHeight="43.0" prefWidth="242.0" style="-fx-border-color: white; -fx-background-color: white; -fx-text-fill: #0a6789;" text="🔄 Empréstimos" textFill="WHITE" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="185.0">
+                        <font>
+                            <Font name="SansSerif Bold" size="19.0" />
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+            <Button fx:id="btnLista" layoutX="37.0" layoutY="421.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="242.0" onAction="#abrirLista" style="-fx-border-color: white; -fx-background-color: white; -fx-text-fill: #0a6789;" text="Lista de Empréstimos" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+                </children>
+            </Pane>
+    </children>
+</Pane>
